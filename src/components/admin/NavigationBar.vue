@@ -9,51 +9,51 @@
       </li>
     </ul>
     <div class="nav-img-box" style="margin-top: 108px;">
-      <img src="../../assets/logo.svg" alt="zs">
+      <img src="../../assets/ionicons/logo-github.svg" alt="zs">
     </div>
   </div>
 </template>
 
-<script>
-import { functionsIn } from 'lodash';
-import {ref, reactive } from 'vue'
+<script setup>
+import { reactive } from '@vue/reactivity'
 
 var NavList = reactive([
   {
     title: "Tasks",
     url: "/admin/tasks",
-    icon: require("../../assets/ionicons/list.svg")
+    icon: "../../src/assets/ionicons/list.svg"
   },
   {
     title: "Workers",
     url: "/admin/workers",
-    icon: require("../../assets/ionicons/list.svg")
+    icon: "../../src/assets/ionicons/list.svg"
   },
   {
     title: "Workbooks",
     url: "/admin/workbooks",
-    icon: require("../../assets/ionicons/list.svg")
+    icon: "../../src/assets/ionicons/list.svg"
   },
   {
     title: "Sheets",
     url: "/admin/sheets",
-    icon: require("../../assets/ionicons/list.svg")
+    icon: "../../src/assets/ionicons/list.svg"
   },
   {
     title: "SheetTemplates",
     url: "/admin/sheettemplates",
-    icon: require("../../assets/ionicons/list.svg")
+    icon: "../../src/assets/ionicons/list.svg"
   },
   {
     title: "Log",
     url: "/admin/log",
-    icon: require("../../assets/ionicons/list.svg")
-  },
+    icon: "../../src/assets/ionicons/list.svg"
+  }
 ])
+
 function clickNav(e) {
   var domList = e.currentTarget.parentNode.children
   for (let index = 0; index < domList.length; index++) {
-    domList[d].className = 'nav-item'
+    domList[index].className = 'nav-item'
   }
   console.log('click', e.currentTarget)
   e.currentTarget.className = 'nav-item isclick'
@@ -76,6 +76,7 @@ a {
   background: #ffffff;
   box-shadow: 3px 0px 6px 0px rgba(82, 82, 82, 0.14);
 }
+
 .nav ul {
   margin-top: 32px;
   padding: 0;

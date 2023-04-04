@@ -1,13 +1,19 @@
 <template>
   <div id="admin-index">
-    <!-- 导航栏开始 -->
+    <div class="menu">
+        <!-- 导航栏开始 -->
+        <NavigationHeader/> 
+        <NavigationBar/>
+        <!-- 导航栏结束 -->
+        <router-view />
+    </div>
+    <div class="content">
 
-      <NavigationBar />
-    <!-- 导航栏结束 -->
-    <router-view />
+    </div>
   </div>
 </template>
 <script>
+import NavigationHeader from './NavigationHeader.vue'
 import NavigationBar from './NavigationBar.vue'
 
 export default {
@@ -30,5 +36,9 @@ export default {
 }
 
 </script>
-<style>
+
+<style scoped>
+.admin-index {
+  display: flex;
+}
 </style>
