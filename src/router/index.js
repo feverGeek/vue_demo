@@ -1,6 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../components/Login.vue'
 import AdminIndex from '../components/admin/AdminIndex.vue'
+import GoodsManage from '../components/admin/GoodsManage.vue'
+import UserManage from '../components/admin/UserManage.vue'
+import TagManage from '../components/admin/TagManage.vue'
+import AddressManage from '../components/admin/AddressManage.vue'
+import VipManage from '../components/admin/VipManage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,25 +19,25 @@ const router = createRouter({
       path: "/admin/index",
       name: "AdminIndex",
       component: AdminIndex,
-      // children: [{
-      //     path: 'goods',
-      //     component: GoodsManage
-      //   },
-      //   {
-      //     path: 'user',
-      //     component: UserManage
-      //   },
-      //   {
-      //     path: 'tag',
-      //     component: TagManage
-      //   }, {
-      //     path: 'address',
-      //     component: AddressManage
-      //   }, {
-      //     path: 'vip',
-      //     component: VipManage
-      //   }
-      // ]
+      children: [{
+          path: 'goods',
+          component: GoodsManage
+        },
+        {
+          path: 'user',
+          component: UserManage
+        },
+        {
+          path: 'tag',
+          component: TagManage
+        }, {
+          path: 'address',
+          component: AddressManage
+        }, {
+          path: 'vip',
+          component: VipManage
+        }
+      ]
     },
     {
       path: '/about',
