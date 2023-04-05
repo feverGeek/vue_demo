@@ -5,7 +5,7 @@ import ElementPlus from 'element-plus'
 import Axios from 'axios'
 
 import './assets/main.css'
-
+import "./assets/base.css"
 //引入饿了么UI的CSS样式
 import 'element-plus/theme-chalk/index.css'
 

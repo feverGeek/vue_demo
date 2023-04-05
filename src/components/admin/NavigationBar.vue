@@ -8,7 +8,7 @@
         </div>
       </li>
     </ul>
-    <div class="nav-img-box" style="margin-top: 108px;">
+    <div class="nav-img-box" style="margin-top: 10;">
       <img src="../../assets/ionicons/logo-github.svg" alt="zs">
     </div>
   </div>

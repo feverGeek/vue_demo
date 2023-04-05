@@ -1,20 +1,23 @@
 <template>
-  <div id="admin-index">
-    <div class="menu">
-        <!-- 导航栏开始 -->
-        <NavigationHeader/> 
-        <NavigationBar/>
-        <!-- 导航栏结束 -->
-        <router-view />
-    </div>
-    <div class="content">
+  <div class="menu">
+    <!-- 导航栏开始 -->
+    <NavigationHeader />
+    <NavigationBar />
+    <!-- 导航栏结束 -->
 
-    </div>
+
+    <router-view />
+  </div>
+  <div class="content">
+    <!-- 右边内容开始 -->
+    <RightNavTop />
+    <!-- 右边内容结束 -->
   </div>
 </template>
 <script>
 import NavigationHeader from './NavigationHeader.vue'
 import NavigationBar from './NavigationBar.vue'
+import RightNavTop from './RightNavTop.vue';
 
 export default {
   name: 'AdminIndex',
@@ -22,7 +25,9 @@ export default {
 
   },
   components: {
-    NavigationBar
+    NavigationHeader,
+    NavigationBar,
+    RightNavTop
   },
   data() {
     return {
@@ -38,7 +43,19 @@ export default {
 </script>
 
 <style scoped>
-.admin-index {
-  display: flex;
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #263238;
+}
+
+.content {
+  position: relative;
+  background: #f1f4f5;
+  height: 100%;
 }
 </style>

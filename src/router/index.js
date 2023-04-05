@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../components/Login.vue'
 import AdminIndex from '../components/admin/AdminIndex.vue'
-import GoodsManage from '../components/admin/GoodsManage.vue'
-import UserManage from '../components/admin/UserManage.vue'
-import TagManage from '../components/admin/TagManage.vue'
-import AddressManage from '../components/admin/AddressManage.vue'
-import VipManage from '../components/admin/VipManage.vue'
+import Tasks from '../components/admin/Tasks.vue'
+import Workers from '../components/admin/Workers.vue'
+import Workbooks from '../components/admin/Workbooks.vue'
+import Sheets from '../components/admin/Sheets.vue'
+import SheetTemplates from '../components/admin/SheetTemplates.vue'
+import Log from '../components/admin/SheetTemplates.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,22 +21,25 @@ const router = createRouter({
       name: "AdminIndex",
       component: AdminIndex,
       children: [{
-          path: 'goods',
-          component: GoodsManage
+          path: 'tasks',
+          component: Tasks
         },
         {
-          path: 'user',
-          component: UserManage
+          path: 'workers',
+          component: Workers
         },
         {
-          path: 'tag',
-          component: TagManage
+          path: 'workbooks',
+          component: Workbooks
         }, {
-          path: 'address',
-          component: AddressManage
+          path: 'sheets',
+          component: Sheets
         }, {
-          path: 'vip',
-          component: VipManage
+          path: 'sheettemplates',
+          component: SheetTemplates
+        }, {
+          path: 'Log',
+          component: Log
         }
       ]
     },
